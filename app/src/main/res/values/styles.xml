@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="textview" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@font/nanum</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="edittext_white" parent="@android:style/Widget.EditText">
+        <item name="android:layout_height">45dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:gravity">start|left|center_vertical</item>
+        <item name="android:fontFamily">@font/nanum</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:background">@drawable/edittext_background_white_rect_r5</item>
+    </style>
+
+    <style name="checkbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textAppearance">@style/textview</item>
+        <item name="android:buttonTint">@color/watermelon</item>
+    </style>
+
+    <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textAppearance">@style/textview</item>
+        <item name="android:buttonTint">@color/watermelon</item>
+    </style>
+
+</resources>

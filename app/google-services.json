@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "918623451049",
+    "firebase_url": "https://thcamera-a109d.firebaseio.com",
+    "project_id": "thcamera-a109d",
+    "storage_bucket": "thcamera-a109d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918623451049:android:f49b958dd9246285",
+        "android_client_info": {
+          "package_name": "kr.co.thinkup.exsample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918623451049-ul915u3osa8h6vn27if9go2itjp84si4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.thinkup.exsample",
+            "certificate_hash": "21958b7c4c3a475a9827417e639c67ccd5b2595e"
+          }
+        },
+        {
+          "client_id": "918623451049-6tpo2u5v99dlgmj1m3mmgfkt4m1un3ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8ljVVo-kw3MIt_7DYn1enShfNTtm5Sow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918623451049-6tpo2u5v99dlgmj1m3mmgfkt4m1un3ee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
