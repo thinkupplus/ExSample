@@ -19,12 +19,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
+import kr.co.thinkup.exsample.SocketSingletone.WifiSocketActivity;
 import kr.co.thinkup.exsample.background.RealService;
 import kr.co.thinkup.exsample.camera.CameraActivity;
 import kr.co.thinkup.exsample.compoent.TComponent;
+import kr.co.thinkup.exsample.db.RealmActivity;
 import kr.co.thinkup.exsample.httprequest.HttpRequestActivity;
 import kr.co.thinkup.exsample.textview.TTextView;
 import kr.co.thinkup.exsample.viewpager.ViewPagerActivity;
+import kr.co.thinkup.exsample.wifi.ActivityWifi;
 import kr.co.thinkup.exsample.workmanager.TWorkManager;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -46,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnCame = findViewById(R.id.btn_camera);
         Button btnHttp = findViewById(R.id.btn_http);
         Button btnWork = findViewById(R.id.btn_work);
+        Button btnwifi = findViewById(R.id.btn_wifi);
+        Button btn_socket = findViewById(R.id.btn_socket);
+        Button btn_realm = findViewById(R.id.btn_realm);
+
+
 
 
         btnText.setOnClickListener(this);
@@ -54,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCame.setOnClickListener(this);
         btnHttp.setOnClickListener(this);
         btnWork.setOnClickListener(this);
+        btnwifi.setOnClickListener(this);
+        btn_socket.setOnClickListener(this);
+        btn_realm.setOnClickListener(this);
 
         //        initService();
         firebaseCurToken();
@@ -88,10 +99,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent work = new Intent(this, TWorkManager.class);
                 startActivity(work);
                 break;
+            case R.id.btn_wifi:
+                Intent wifi = new Intent(this, ActivityWifi.class);
+                startActivity(wifi);
+                break;
+            case R.id.btn_socket:
+                Intent sock = new Intent(this, WifiSocketActivity.class);
+                startActivity(sock);
+                break;
+            case R.id.btn_realm:
+                Intent realm = new Intent(this, RealmActivity.class);
+                startActivity(realm);
+                break;
 
         }
     }
 
+    /**
+     * Token value를 알아낸다.
+     * 포스트맨에서 보내기할때 to 값에 넣어준다.
+     */
     private void firebaseCurToken() {
         FirebaseInstanceId.getInstance().getInstanceId()
                 .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {

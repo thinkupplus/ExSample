@@ -46,6 +46,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="WorkManager"/>
+        <Button
+            android:id="@+id/btn_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WIFI Connection"/>
+        <Button
+            android:id="@+id/btn_socket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="socket 안됨"/>
+        <Button
+            android:id="@+id/btn_realm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="realm"/>
 
     </LinearLayout>
 

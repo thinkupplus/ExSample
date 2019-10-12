@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <ListView
+        android:id="@+id/realm_listview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <Button
+        android:id="@+id/btn_realm_power"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POWER"/>
+    <Button
+        android:id="@+id/btn_realm_use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="USE"/>
+    <Button
+        android:id="@+id/btn_realm_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brightness"/>
+
+    <TextView
+        android:id="@+id/realm_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REALM"
+        android:gravity="center"/>
+
+</LinearLayout>

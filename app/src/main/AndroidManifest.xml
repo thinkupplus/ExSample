@@ -11,6 +11,15 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
+    <!-- Wifi 사용 권한 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/> -->
+    <!-- 네트워크 정보에 접근 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:name=".Globals"
         android:allowBackup="true"
@@ -19,7 +28,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,6 +42,12 @@
         <activity android:name=".camera.CameraActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".httprequest.HttpRequestActivity" android:parentActivityName=".MainActivity"/>
         <activity android:name=".workmanager.TWorkManager" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".wifi.ActivityWifi" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SocketSingletone.WifiSocketActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SocketSingletone.WifiSocket1Activity" android:parentActivityName=".MainActivity"/>
+
+
+        <activity android:name=".db.RealmActivity" android:parentActivityName=".MainActivity"/>
 
         <service android:name=".firebase.FirebaseInstanceIDService" android:stopWithTask="false">
             <intent-filter>

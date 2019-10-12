@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="WIFI CONNECTION TEST"/>
+
+    <Button
+        android:id="@+id/wifi_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WIFI 1"/>
+
+    <Button
+        android:id="@+id/wifi_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WIFI 2"/>
+
+    <Button
+        android:id="@+id/btn_current_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current wifi"/>
+
+    <TextView
+        android:id="@+id/tv_wifi_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="cccc"/>
+
+
+
+</LinearLayout>

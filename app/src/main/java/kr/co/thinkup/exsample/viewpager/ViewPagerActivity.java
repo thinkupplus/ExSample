@@ -6,15 +6,24 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import kr.co.thinkup.exsample.R;
 
 /**
  * 2019-08-02 by yh.Choi
+ *
+ * https://dev-imaec.tistory.com/13
  */
 public class ViewPagerActivity extends AppCompatActivity {
+
+    private static final String TAG = "ViewPagerActivity";
+
+    public TextView             tv_viewpager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +39,9 @@ public class ViewPagerActivity extends AppCompatActivity {
         listimages.add(R.drawable.lkjewr);
 
 
-        ViewPager viewPager = findViewById(R.id.viewpager);
+        tv_viewpager = findViewById(R.id.tv_viewpager);
+
+        final ViewPager viewPager = findViewById(R.id.viewpager);
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(fragmentAdapter);
@@ -52,6 +63,38 @@ public class ViewPagerActivity extends AppCompatActivity {
         }
 
         fragmentAdapter.notifyDataSetChanged();
+
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+//                Log.d(TAG, "onPageScrolled: " + i);
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+                Log.d(TAG, "onPageSelected: " + i);
+                setViewPager_Title(i);
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+//                Log.d(TAG, "onPageScrollStateChanged: " + i );
+            }
+        });
+    }
+
+
+    public void setViewPager_Title(int page) {
+
+        String msg = String.format(Locale.getDefault(), "Page No = [ %d ]", page);
+
+//        tv_viewpager.setText(msg);
+
+        tv_viewpager.append("\n");
+        tv_viewpager.append(msg);
+
     }
 }
 
